@@ -1,12 +1,5 @@
-import React, {Component} from "react"
-
-class Welcome extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return <h1>Hello {this.props.name}</h1>
-  }
+const  Welcome = props => {
+    return <h1>Hello {props.name}</h1>
 }
 
 function App() {
