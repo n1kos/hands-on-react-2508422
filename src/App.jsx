@@ -21,12 +21,23 @@ function App() {
         {memberInfo && (
           <article>
             <hgroup>
-              <div>
-                <img src={`images/${memberInfo.slug}.svg`} alt={memberInfo.name} />
+              <div style={
+                {
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "1rem",
+                  marginBottom: "1rem",
+                }
+              }>
+                <img style={{width: "200px"}} src={`images/${memberInfo.slug}.svg`} alt={memberInfo.name} />
+                <hgroup>
+
                 <h1>
                   {memberInfo.name}
                 </h1>
                 <p>{memberInfo.bio}</p>
+                </hgroup>
               </div>
             </hgroup>
           </article>
