@@ -10,10 +10,7 @@ export default () => {
       onClick={() => {
         setCount(prev => prev+1);  
         setCount(prev => prev+1)}
-      }>{(()=>{
-        if (count === 0) return "Click to support us"
-        else return `Supported ${count} times`
-      })()}</button>
+      }>{count === 0 ? "Click to support" : `Supported ${count} times`}</button>
     </div>
   )
 }
