@@ -1,6 +1,4 @@
-const  Welcome = props => {
-    return <h1>Hello {props.name}</h1>
-}
+import Welcome from "./components/Welcome"
 
 function App() {
   const name = 'StarGazers'
