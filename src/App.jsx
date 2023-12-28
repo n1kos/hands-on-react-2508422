@@ -44,6 +44,11 @@ function App() {
             <Modals
               member={memberInfo}
               handleChange={(id) => {
+                if (id <0 ) {
+                  id = cast.length - 1;
+                } else if (id > cast.length - 1) {
+                  id = 0;
+                }
                 setMemberInfo(cast[id]);
               }}
               handleClose={(areturn) => {
