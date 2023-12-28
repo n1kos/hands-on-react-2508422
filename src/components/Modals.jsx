@@ -1,4 +1,4 @@
-export default ({ member, handleClose, handleChange }) => {
+export default ({ member, isFirst, isLast, handleClose, handleChange }) => {
   return (
     <dialog id="modal-member" open>
       <article>
@@ -28,26 +28,30 @@ export default ({ member, handleClose, handleChange }) => {
               <p>{member.bio}</p>
             </hgroup>
             <hgroup>
-              <a
-                className="outline"
-                href="#"
-                role="button"
-                onClick={() => {
-                  handleChange(member.id - 1);
-                }}
-              >
-                previous
-              </a>
-              <a
-                className="outline"
-                href="#"
-                role="button"
-                onClick={() => {
-                  handleChange(member.id + 1);
-                }}
-              >
-                next
-              </a>
+              {!isFirst && (
+                <a
+                  className="outline"
+                  href="#"
+                  role="button"
+                  onClick={() => {
+                    handleChange(member.id - 1);
+                  }}
+                >
+                  previous
+                </a>
+              )}
+              {!isLast && (
+                <a
+                  className="outline"
+                  href="#"
+                  role="button"
+                  onClick={() => {
+                    handleChange(member.id + 1);
+                  }}
+                >
+                  next
+                </a>
+              )}
             </hgroup>
           </div>
         </hgroup>

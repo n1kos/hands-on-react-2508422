@@ -43,6 +43,8 @@ function App() {
           {memberInfo && (
             <Modals
               member={memberInfo}
+              isLast={memberInfo.id === cast.length - 1}
+              isFirst={memberInfo.id === 0}
               handleChange={(id) => {
                 if (id <0 ) {
                   id = cast.length - 1;
